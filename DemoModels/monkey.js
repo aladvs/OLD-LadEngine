@@ -1,4 +1,4 @@
-var NewdepthFactor = 350
+var NewdepthFactor = 450
 var ObjData = `
 # Model sourced from Blender 3.4.1
 # part of Lad Engine

@@ -14,7 +14,7 @@ ctx.translate(c.width / 2,c.height / 2)
 //set up canvas, put 0,0 in center
 var pointsCorrected = []
 var points = []
-var depthFactor = 350
+var depthFactor = 450
 //This is model dependent. It should also be a number inside of each .js file. Variable name should be "NewdepthFactor"
 loadNewOBJ('DemoModels/monkey.js', onOBJLoaded);
 console.log(points)
@@ -271,11 +271,8 @@ function calculateDepthFactor(){
     }
   
     // Set depthFactor based on the calculated maximum distance with a safety margin
-    const safetyMargin = 1.7; // Adjust this factor as needed
+    const safetyMargin = 2.7; // Adjust this factor as needed
     depthFactor = maxDistance * safetyMargin;
-    if (depthFactor < 350) {
-      depthFactor = 350
-    }
     console.log('Calculated depthFactor:', depthFactor);
 }
 

@@ -1,4 +1,3 @@
-var NewdepthFactor = 700
 var ObjData = `
 # Model by Didier Hannoir - https://sketchfab.com/dhannoir
 # part of Lad Engine

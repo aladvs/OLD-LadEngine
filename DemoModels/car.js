@@ -1,4 +1,3 @@
-var NewdepthFactor = 1000
 var ObjData = `
 # Model by LucasBenicio
 # part of Lad Engine

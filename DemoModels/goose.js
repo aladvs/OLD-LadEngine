@@ -1,4 +1,3 @@
-var NewdepthFactor = 350
 var ObjData = `
 # Model by Atlas - https://sketchfab.com/Atlasmodels 
 # part of Lad Engine

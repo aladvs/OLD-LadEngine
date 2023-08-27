@@ -15,7 +15,6 @@ ctx.translate(c.width / 2,c.height / 2)
 var pointsCorrected = []
 var points = []
 var depthFactor = 450
-//This is model dependent. It should also be a number inside of each .js file. Variable name should be "NewdepthFactor"
 loadNewOBJ('DemoModels/monkey.js', onOBJLoaded);
 console.log(points)
 pointsCorrected = []
@@ -195,7 +194,7 @@ function loadNewOBJ(url, callback) {
 
 function onOBJLoaded() {
   parseOBJ(ObjData);
-  depthFactor = NewdepthFactor
+  calculateDepthFactor();
 }
 
 function scaleExistingPoints() {
@@ -212,6 +211,22 @@ function scaleExistingPoints() {
    }
   }
   depthFactor *= scaleFactor
+}
+
+function calculateDepthFactor(){
+  // Calculate the maximum distance from the center for all vertices
+  let maxDistance = 0;
+  for (const faceVertices of points) {
+    for (const vertex of faceVertices) {
+      const distance = Math.sqrt(vertex[0] ** 2 + vertex[1] ** 2 + vertex[2] ** 2);
+      maxDistance = Math.max(maxDistance, distance);
+    }
+  }
+
+  // Set depthFactor based on the calculated maximum distance with a safety margin
+  const safetyMargin = 2.7; // Adjust this factor as needed
+  depthFactor = maxDistance * safetyMargin;
+  console.log('Calculated depthFactor:', depthFactor);
 }
 
 //Importing .obj's -----------------------------------------------------------
@@ -260,21 +275,7 @@ function handleImportedFile(obj) {
   calculateDepthFactor();
 }
 
-function calculateDepthFactor(){
-    // Calculate the maximum distance from the center for all vertices
-    let maxDistance = 0;
-    for (const faceVertices of points) {
-      for (const vertex of faceVertices) {
-        const distance = Math.sqrt(vertex[0] ** 2 + vertex[1] ** 2 + vertex[2] ** 2);
-        maxDistance = Math.max(maxDistance, distance);
-      }
-    }
-  
-    // Set depthFactor based on the calculated maximum distance with a safety margin
-    const safetyMargin = 2.7; // Adjust this factor as needed
-    depthFactor = maxDistance * safetyMargin;
-    console.log('Calculated depthFactor:', depthFactor);
-}
+
 
 function printVerticeCount() {
   var count = 0

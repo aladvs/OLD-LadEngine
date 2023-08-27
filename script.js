@@ -66,6 +66,8 @@ window.addEventListener('resize', function(event) {
   halfheight = c.height / 2
   halfwidth = c.width / 2
   ctx.translate(halfwidth, halfheight); // Reapply the translation
+  ctx.fillStyle = '#000';
+  ctx.strokeStyle = 'white';
 });
 
 

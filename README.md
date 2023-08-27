@@ -8,6 +8,6 @@ This project can import .obj files, and can also automatically load local models
 
 # Shortcuts
 Currently, you can use these shortcuts: <br>
-<ins>**1 - 4 keys**</ins> - load demo models<br>
-<ins>**i**</ins> - import .obj file<br>
-<ins>**o**</ins> - Scale existing model<br>
+<h6><ins>**1 - 4 keys**</ins></h6> - load demo models<br>
+<h6><ins>**i**</ins></h6> - import .obj file<br>
+<h6><ins>**o**</ins></h6> - Scale existing model<br>

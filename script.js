@@ -176,7 +176,6 @@ document.addEventListener('keydown', function(event) {
 
 //Loads .obj renamed as .js file due to security limitations with local browsers
 //To prepare .obj for importing you must make a variable called "ObjData" and then put the actual .obj data inside.
-//You should also add a "NewdepthFactor" variable, as some larger models have issues.
 //Most models are much smaller than what this program uses, so you must scale them up.
 function loadNewOBJ(url, callback) {
   var existingScript = document.querySelector('script[src="' + url + '"]');

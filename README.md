@@ -1,6 +1,6 @@
 # LadEngine
 Fast JS wireframe renderer.
-[Online Demo](https://aladvs.github.io/LadEngine)
+[Online Demo](https://aladvs.github.io/OLD-LadEngine)
 
 This is an efficient JS software renderer developed for fun, and to learn about 3d computer graphics.
 

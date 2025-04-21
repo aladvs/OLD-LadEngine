@@ -1,4 +1,4 @@
-# LadEngine
+# js-wireframe-render
 Fast JS wireframe renderer.
 [Online Demo](https://aladvs.github.io/OLD-LadEngine)
 
